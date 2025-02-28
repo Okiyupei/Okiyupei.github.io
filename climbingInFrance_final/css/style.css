@@ -1,0 +1,281 @@
+body{
+	background:#eae7e7; font-family: Arial, "Times New Roman", serif;
+	font-size: 125%
+}
+/* Skip link styling */
+a[href="#main-content"] {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  /* Make it visible when focused */
+  a[href="#main-content"]:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    color: #0066cc;
+    border: 2px solid #0066cc;
+    border-radius: 4px;
+    z-index: 100;
+    text-decoration: underline;
+    font-weight: bold;
+    outline: none;
+    display: inline-block;
+  }
+/* General Header Styling */
+header {
+    background: linear-gradient(to bottom, #b7d9f2, #e2ed8e); /* Smooth gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom-left-radius: 30px; /* Soft rounded bottom */
+    border-bottom-right-radius: 30px;
+}
+
+/* Styling the Header Image */
+header img.headerPhoto {
+    max-width: 40%;
+    height: auto;
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+header img.headerPhoto:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Navigation Bar Styling */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0); /* Light transparent background */
+    padding: 10px 0;
+    border-radius: 15px;
+}
+
+/* Navigation List */
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add spacing between items */
+    padding: 0;
+    width: 100%;
+}
+
+/* Navigation Items */
+nav ul li {
+    background: none; /* Remove blocky background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+nav ul li:hover {
+    background: rgba(255, 255, 255, 0.3); /* Light hover effect */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Navigation Links */
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change Color on Hover */
+nav a:hover {
+    color: #0077cc;
+}
+
+/* Active Page Indicator */
+.current {
+    text-transform: uppercase;
+    background: #78f1bc;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Improve H1 Styling */
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Poppins", sans-serif;
+}
+main {
+    background: #faf0fa;
+    font-family: Arial, "Times New Roman", serif;
+    font-size: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+}
+
+/* Ensure text content remains separate */
+.text-content {
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Style for paragraphs */
+.text-content p {
+    font-family: Arial, "Times New Roman", serif;
+    font-size: 120%;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+/* Artistic Grid Layout - Enhanced */
+.gallery div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px; /* Slightly increased for more breathing room */
+    width: 90%; /* Slightly wider to showcase images better */
+    max-width: 1200px;
+    margin: 30px auto; /* Better centering and spacing */
+}
+
+/* Modern Image Styling */
+div img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px; /* Slightly more rounded corners */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smoother, more modern transition */
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Enhanced Hover Effects */
+div img:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift effect + subtle scale */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Click to enlarge hint with modern styling */
+div img:hover::before {
+    content: "Click to enlarge";
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 30px; /* Pill shape for modern look */
+    font-size: 14px;
+    z-index: 10;
+    pointer-events: none;
+    font-weight: 500; /* Slightly bolder */
+    letter-spacing: 0.5px; /* Improved readability */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow on the hint */
+}
+
+/* Optional: Add modern image overlay gradient */
+div img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px; /* Match image border radius */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 40%);
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+div img:hover::after {
+    opacity: 0.5;
+}
+
+/* Enhanced Modal for Modern Experience */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.9); /* Darker, more contemporary background */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Modern blur effect (works in most browsers) */
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease-out;
+    transform: scale(0.95);
+    animation: modal-zoom 0.3s forwards;
+}
+
+@keyframes modal-zoom {
+    to { transform: scale(1); }
+}
+h1{
+	color: #ffffff; background:rgb(72, 106, 218);
+	text-align: center; font-family: Arial, "Times New Roman", serif;
+	font-size: 150%
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Full Image in Modal */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+footer{
+	background: #abe3f2; text-align: center; font-size: 80%
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SaintLeger</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body> 
+  <a href="#main-content"> Skip to Main Content</a>
+  <header>  
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="current"><a href="SaintLeger.html">SaintLeger Climbing</a></li>
+        <li><a href="Ceuse.html">Ceuse Climbing</a></li>
+      </ul>
+    </nav>
+    <img class="headerPhoto" src="images/whalewall_SaintLeger.jpg" alt="The big climbing wall looks like a whale shape">
+    <h1>SaintLeger Climbing</h1>
+  </header>
+  <main id="main-content">
+    <section class="gallery">
+    <div>
+      <img src="images/library_SaintLeger.jpg"
+        alt="A little house with graffiti on the wall in the woods">
+      <img src="images/valley_SaintLeger.jpg" alt="Very green in the mountain valley">
+      <img src="images/black_pattern_SaintLeger.jpg" alt="uniqe limestone climbing wall with black strip patterns">
+      <img src="images/symbol_routes_SaintLeger.jpg" alt="Symbols made of Pottery with cartoon and qoute for each climbing route">
+      <img src="images/traingwall_SaintLeger.jpg" alt="A handmade climbing traing wall under a outdoor reef">
+    </div>
+    </section>
+  </main>
+  <!-- Modal for Full Image Display -->
+  <div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="fullImage" src="" alt="Enlarged image">
+  </div>
+  <footer>
+    <p>This page was originally created by YuPei Huang</p>
+  </footer>  
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the modal
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('fullImage');
+        const closeBtn = document.querySelector('.close');
+        
+        // Get all images in the gallery
+        const images = document.querySelectorAll('div img');
+        
+        // Add click event to each image
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+        
+        // Close modal when clicking the × button
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
